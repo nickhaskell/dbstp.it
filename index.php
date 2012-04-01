@@ -23,7 +23,10 @@
   <title>DUBSTEP.IT - A Dubstep Robot From the Future & Dubstep Remix Finder</title>
   <meta name="description" content="DUBSTEP.IT - A Dubstep robot form the future and engine for authentic dubsperiences. Find the dubstep remix of everything. Dubstep cat.">
   <meta name="author" content="Nick Haskell - niiiick.com">
+  <!--
   <meta name="viewport" content="width=1060">
+  -->
+  <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="favicon.ico">
   <link href="http://fonts.googleapis.com/css?family=Righteous" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css"> 
@@ -99,7 +102,8 @@
 							</li>
 							<li>
 								<div class="copyright">
-									<p>by <a href="http://twitter.com/#!/nickhaskell" target="_blank">@nickhaskell</a> -  all non-video content &copy; 2011</p>
+									<p class="c-large">by <a href="http://twitter.com/#!/nickhaskell" target="_blank">@nickhaskell</a> -  all non-video content &copy; 2011</p>
+									<p class="c-small"><a href="http://twitter.com/#!/nickhaskell" target="_blank">@nickhaskell</a></p>
 								</div>
 							</li>
 							<div class="clearit"></div>

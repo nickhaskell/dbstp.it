@@ -229,7 +229,7 @@ body {
 .texture{
 	width:100%;
 	height:100%;
-	background: url(images/bg-grid-dark.png) transparent left top;
+	background: url(../images/bg-grid-dark.png) transparent left top;
 	z-index:2;
 }
 
@@ -280,7 +280,6 @@ h2.quote{
 	color:#fff;
 	.subfont;
 	font-style:italic;
-	font-size:16pxx;
 	line-height:21px;
 	margin:0 0 0 0 !important;
 	padding:20px 20px 0px 25px;
@@ -325,7 +324,6 @@ h2.quote{
 							-webkit-font-smoothing: subpixel-antialiased !important;
 						}
 						a{
-							//background-color:#999;
 							background-color: darken(@grey, 10%);
 							color:#fff;
 							padding:5px 6px 3px 6px;
@@ -447,7 +445,7 @@ h2.quote{
 							width:108px;
 							height:108px;
 							cursor:pointer;
-							background:url(images/shirts-bro7.png) no-repeat left top;
+							background:url(../images/shirts-bro7.png) no-repeat left top;
 							text-indent:-9999px;
 							position:absolute;
 							right:0px;
@@ -510,7 +508,7 @@ h2.quote{
 		border-top:1px solid darken(@blue, 5%);
 		.texture{
 			.wrap;
-			background-image:url(images/share_texture.png);
+			background-image:url(../images/share_texture.png);
 			border-bottom:1px solid darken(@blue, 20%);
 			.container{
 				.content;
@@ -526,10 +524,13 @@ h2.quote{
 									height:20px !important;
 									display:block !important;
 									a.addthis_button_tweet{
-										width:92px !important;
+										width:87px !important;
 										iframe{
 											width:92px !important;
 										}
+									}
+									.fb-like{
+										width:90px;
 									}
 								}
 							.copyright	{
@@ -544,18 +545,13 @@ h2.quote{
 									border-left:1px solid lighten(@blue, 20%);
 									font-weight:bold;
 									margin:0 0 0 0px;
-									padding:3px 0 0 18px;									
+									padding:3px 0 0 18px;	
+									&.c-small{
+										display:none;
+									}								
 									a{
-										//display:inline-block;
-										//padding:3px 4px 2px 4px;
-										//background-color:lighten(@blue, 25%);
 										color: darken(@blue, 40%) !important;
-										
-										//border-top:1px solid darken(@blue, 30%);
-										//border-bottom:1px solid lighten(@blue, 35%);
-										//.rounded-corners(2px);
 										margin:0 1px 0 2px;
-										//font-size:11px;
 										&:hover{
 											color:#fff;
 											text-shadow:none;
@@ -641,6 +637,29 @@ a.addthis_button_google_plusone{ width:76px !important; }
 	height:100%;
 	top:-12px;
 	left:0;
+}
+
+/* ################################################ glow */
+
+.glow{
+-webkit-animation:inputGlow 2s infinite ease-in-out;
+-moz-animation:inputGlow 2s infinite ease-in-out;
+}
+
+@-webkit-keyframes inputGlow{
+0%{-webkit-box-shadow: 0 0 0px #1b83d4; }
+25%{-webkit-box-shadow: 0 0 5px #1b83d4; }
+50%{-webkit-box-shadow: 0 0 10px #1b83d4; }
+75%{-webkit-box-shadow: 0 0 5px #1b83d4; }
+100%{-webkit-box-shadow: 0 0 0px #1b83d4; }
+}
+
+@-moz-keyframes inputGlow{
+0%{-moz-box-shadow: 0 0 0px #1b83d4; }
+25%{-moz-box-shadow: 0 0 5px #1b83d4; }
+50%{-moz-box-shadow: 0 0 10px #1b83d4; }
+75%{-moz-box-shadow: 0 0 5px #1b83d4; }
+100%{-moz-box-shadow: 0 0 0px #1b83d4; }
 }
 
 @import "media-queries.less";

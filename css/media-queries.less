@@ -2,16 +2,92 @@
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+@phonewidth:480px;
+
+header {
+	.container{
+		h1{
+			padding:5px 10px 5px 10px;
+			font-size:18px;
+		}
+		h2.quote{
+			padding:2px 10px 0px 15px;
+			font-size:12px;
+			width:250px;
+			line-height:15px;
+			display:none;
+		}
+	} 
+}
+
+#main{
+	.search{
+		.container{
+			height:68px;
+			width:@phonewidth;
+			margin:0 auto;
+			.inside{
+				margin-left:10px;
+				input.search_input{
+					width:196px !important;
+					font-size:18px !important;
+					height:30px !important;
+					padding:7px 12px 7px 12px;
+					}
+				.search_button{
+					height:34px !important;
+					padding:13px 12px 0px 12px !important;
+					font-size:18px !important;
+				}	
+				.search_random{ display:none; }
+				.merch{ display:none; }
+				.headline{
+					top:-156px;
+					width:300px !important;
+					h3{
+						font-size:14px;
+						line-height:19px;
+						.head{
+							font-size:19px;
+						}
+					}
+				}
+				.suggestion{
+					top:-55px;
+					width:360px !important;
+					h3{
+						font-size:14px;
+						line-height:19px;
+						padding:10px 15px 8px 15px;
+					}
+				}
+			}	
+		}
+	}
+	.share{
+		.container{
+			width:@phonewidth !important;
+			margin-left:10px !important;
+			p{ padding:3px 0 0 10px !important; }
+			p.c-large{ display: none; }
+			p.c-small{ display: block !important; }
+			a.addthis_button_google_plusone{ width:70px !important; }
+		}
+	}
+}	
 
 }
 
 @media only screen and (min-width: 768px) {
 
 
+
 }
 
 @media only screen and (min-width: 1140px) {
 
+	
 
 }

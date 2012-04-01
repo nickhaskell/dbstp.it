@@ -321,7 +321,7 @@ body {
 .texture {
   width: 100%;
   height: 100%;
-  background: url(images/bg-grid-dark.png) transparent left top;
+  background: url(../images/bg-grid-dark.png) transparent left top;
   z-index: 2;
 }
 /* ################################################ header */
@@ -371,7 +371,6 @@ h2.quote {
   color: #fff;
   font-family: 'Georgia', serif;
   font-style: italic;
-  font-size: 16pxx;
   line-height: 21px;
   margin: 0 0 0 0 !important;
   padding: 20px 20px 0px 25px;
@@ -564,7 +563,7 @@ h2.quote {
   width: 108px;
   height: 108px;
   cursor: pointer;
-  background: url(images/shirts-bro7.png) no-repeat left top;
+  background: url(../images/shirts-bro7.png) no-repeat left top;
   text-indent: -9999px;
   position: absolute;
   right: 0px;
@@ -643,7 +642,7 @@ h2.quote {
 }
 #main .share .texture {
   width: 100%;
-  background-image: url(images/share_texture.png);
+  background-image: url(../images/share_texture.png);
   border-bottom: 1px solid #0f4b7a;
 }
 #main .share .texture .container {
@@ -664,10 +663,13 @@ h2.quote {
   display: block !important;
 }
 #main .share .texture .container .inside ul li .addthis_toolbox.addthis_default_style a.addthis_button_tweet {
-  width: 92px !important;
+  width: 87px !important;
 }
 #main .share .texture .container .inside ul li .addthis_toolbox.addthis_default_style a.addthis_button_tweet iframe {
   width: 92px !important;
+}
+#main .share .texture .container .inside ul li .addthis_toolbox.addthis_default_style .fb-like {
+  width: 90px;
 }
 #main .share .texture .container .inside ul li .copyright {
   height: 20px;
@@ -688,6 +690,9 @@ h2.quote {
   font-weight: bold;
   margin: 0 0 0 0px;
   padding: 3px 0 0 18px;
+}
+#main .share .texture .container .inside ul li .copyright p.c-small {
+  display: none;
 }
 #main .share .texture .container .inside ul li .copyright p a {
   color: #04131f !important;
@@ -771,11 +776,121 @@ a.addthis_button_google_plusone {
   top: -12px;
   left: 0;
 }
+/* ################################################ glow */
+.glow {
+  -webkit-animation: inputGlow 2s infinite ease-in-out;
+  -moz-animation: inputGlow 2s infinite ease-in-out;
+}
+@-webkit-keyframes inputGlow {
+  0% {
+    -webkit-box-shadow: 0 0 0px #1b83d4;
+  }
+  25% {
+    -webkit-box-shadow: 0 0 5px #1b83d4;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 10px #1b83d4;
+  }
+  75% {
+    -webkit-box-shadow: 0 0 5px #1b83d4;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0px #1b83d4;
+  }
+}
+@-moz-keyframes inputGlow {
+  0% {
+    -moz-box-shadow: 0 0 0px #1b83d4;
+  }
+  25% {
+    -moz-box-shadow: 0 0 5px #1b83d4;
+  }
+  50% {
+    -moz-box-shadow: 0 0 10px #1b83d4;
+  }
+  75% {
+    -moz-box-shadow: 0 0 5px #1b83d4;
+  }
+  100% {
+    -moz-box-shadow: 0 0 0px #1b83d4;
+  }
+}
 /* =============================================================================
    Media Queries
    ========================================================================== */
-@media only screen and (min-width: 480px) {
-  
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  header .container h1 {
+    padding: 5px 10px 5px 10px;
+    font-size: 18px;
+  }
+  header .container h2.quote {
+    padding: 2px 10px 0px 15px;
+    font-size: 12px;
+    width: 250px;
+    line-height: 15px;
+    display: none;
+  }
+  #main .search .container {
+    height: 68px;
+    width: 480px;
+    margin: 0 auto;
+  }
+  #main .search .container .inside {
+    margin-left: 10px;
+  }
+  #main .search .container .inside input.search_input {
+    width: 196px !important;
+    font-size: 18px !important;
+    height: 30px !important;
+    padding: 7px 12px 7px 12px;
+  }
+  #main .search .container .inside .search_button {
+    height: 34px !important;
+    padding: 13px 12px 0px 12px !important;
+    font-size: 18px !important;
+  }
+  #main .search .container .inside .search_random {
+    display: none;
+  }
+  #main .search .container .inside .merch {
+    display: none;
+  }
+  #main .search .container .inside .headline {
+    top: -156px;
+    width: 300px !important;
+  }
+  #main .search .container .inside .headline h3 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  #main .search .container .inside .headline h3 .head {
+    font-size: 19px;
+  }
+  #main .search .container .inside .suggestion {
+    top: -55px;
+    width: 360px !important;
+  }
+  #main .search .container .inside .suggestion h3 {
+    font-size: 14px;
+    line-height: 19px;
+    padding: 10px 15px 8px 15px;
+  }
+  #main .share .container {
+    width: 480px !important;
+    margin-left: 10px !important;
+  }
+  #main .share .container p {
+    padding: 3px 0 0 10px !important;
+  }
+  #main .share .container p.c-large {
+    display: none;
+  }
+  #main .share .container p.c-small {
+    display: block !important;
+  }
+  #main .share .container a.addthis_button_google_plusone {
+    width: 70px !important;
+  }
 }
 @media only screen and (min-width: 768px) {
   
