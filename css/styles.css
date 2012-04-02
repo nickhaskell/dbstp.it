@@ -663,13 +663,13 @@ h2.quote {
   display: block !important;
 }
 #main .share .texture .container .inside ul li .addthis_toolbox.addthis_default_style a.addthis_button_tweet {
-  width: 87px !important;
+  width: 85px !important;
 }
 #main .share .texture .container .inside ul li .addthis_toolbox.addthis_default_style a.addthis_button_tweet iframe {
-  width: 92px !important;
+  width: 85px !important;
 }
 #main .share .texture .container .inside ul li .addthis_toolbox.addthis_default_style .fb-like {
-  width: 90px;
+  width: 87px;
 }
 #main .share .texture .container .inside ul li .copyright {
   height: 20px;
