@@ -11,7 +11,9 @@ nav,
 section {
   display: block;
 }
-audio, canvas, video {
+audio,
+canvas,
+video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -65,13 +67,15 @@ a:hover {
 a:focus {
   outline: none;
 }
-a:hover, a:active {
+a:hover,
+a:active {
   outline: 0;
 }
 abbr[title] {
   border-bottom: 1px dotted;
 }
-b, strong {
+b,
+strong {
   font-weight: bold;
 }
 blockquote {
@@ -115,14 +119,16 @@ pre {
 q {
   quotes: none;
 }
-q:before, q:after {
+q:before,
+q:after {
   content: "";
   content: none;
 }
 small {
   font-size: 85%;
 }
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -134,14 +140,16 @@ sup {
 sub {
   bottom: -0.25em;
 }
-ul, ol {
+ul,
+ol {
   margin: 0 0;
   padding: 0 0 0 0;
 }
 dd {
   margin: 0 0 0 40px;
 }
-nav ul, nav ol {
+nav ul,
+nav ol {
   list-style: none;
   list-style-image: none;
   margin: 0;
@@ -183,11 +191,13 @@ textarea {
   vertical-align: baseline;
   *vertical-align: middle;
 }
-button, input {
+button,
+input {
   line-height: normal;
   *overflow: visible;
 }
-table button, table input {
+table button,
+table input {
   *overflow: auto;
 }
 button,
@@ -197,7 +207,8 @@ input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
 }
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
 }
 input[type="search"] {
@@ -209,7 +220,8 @@ input[type="search"] {
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -218,7 +230,8 @@ textarea {
   vertical-align: top;
   resize: vertical;
 }
-input:invalid, textarea:invalid {
+input:invalid,
+textarea:invalid {
   background-color: #f0dddd;
 }
 table {
@@ -321,7 +334,7 @@ body {
 .texture {
   width: 100%;
   height: 100%;
-  background: url(http://dbstp.it/images/bg-grid-dark.png) transparent left top !important;
+  background: url(images/bg-grid-dark.png) transparent left top;
   z-index: 2;
 }
 /* ################################################ header */
@@ -564,7 +577,7 @@ h2.quote {
   width: 108px;
   height: 108px;
   cursor: pointer;
-  background: url(http://dbstp.it/images/shirts-bro7.png) no-repeat left top;
+  background: url(images/shirts-bro7.png) no-repeat left top;
   text-indent: -9999px;
   position: absolute;
   right: 0px;
@@ -643,7 +656,7 @@ h2.quote {
 }
 #main .share .texture {
   width: 100%;
-  background-image: url(http://www.dbstp.it/images/share_texture.png) !important;
+  background-image: url(images/share_texture.png);
   border-bottom: 1px solid #0f4b7a;
 }
 #main .share .texture .container {
@@ -694,7 +707,7 @@ h2.quote {
   margin: 0 1px 0 2px;
 }
 #main .share .texture .container .inside ul li .copyright p a:hover {
-  color: #fff !important;
+  color: #fff;
   text-shadow: none;
   text-shadow: 0px 1px 1px #04131f;
   -moz-text-shadow: 0px 1px 1px #04131f;
@@ -770,28 +783,4 @@ a.addthis_button_google_plusone {
   height: 100%;
   top: -12px;
   left: 0;
-}
-.thumbnail{
-	display:none;
-}
-/* ################################################ glow */
-.glow{
--webkit-animation:inputGlow 2s infinite ease-in-out;
--moz-animation:inputGlow 2s infinite ease-in-out;
-}
-
-@-webkit-keyframes inputGlow{
-0%{-webkit-box-shadow: 0 0 0px #1b83d4; }
-25%{-webkit-box-shadow: 0 0 5px #1b83d4; }
-50%{-webkit-box-shadow: 0 0 10px #1b83d4; }
-75%{-webkit-box-shadow: 0 0 5px #1b83d4; }
-100%{-webkit-box-shadow: 0 0 0px #1b83d4; }
-}
-
-@-moz-keyframes inputGlow{
-0%{-moz-box-shadow: 0 0 0px #1b83d4; }
-25%{-moz-box-shadow: 0 0 5px #1b83d4; }
-50%{-moz-box-shadow: 0 0 10px #1b83d4; }
-75%{-moz-box-shadow: 0 0 5px #1b83d4; }
-100%{-moz-box-shadow: 0 0 0px #1b83d4; }
 }
