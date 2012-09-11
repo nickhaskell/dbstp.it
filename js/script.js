@@ -273,16 +273,19 @@ $(".search_random").click(searchRandom);
 						var final="<div id='title'>"+video_title+"</div><div>"+video_frame+"</div><div id='count'>"+video_viewCount+" Views</div>";
 						
 						$("#result").html(final);
-						$(".vidlink").html("<div class='search-result'>You found <strong>"+
-							rand_input+
-							" Dubstep!</strong> <a class='permalink' target='_blank' href='http://dbstp.it/?s="+
-							rand_input+
-							"'>Permalink</a> <a href='http://www.youtube.com/watch?v="+
-							video_id+
-							"' target='_blank'>YouTube Link</a></div>");
+
+						$(".vidlink").html("<div class='search-result'>You found <strong>"+rand_input+" Dubstep!</strong> <div id='perm' class='permalink'>Permalink</div><input id='copylink' type='text' value='http://dbstp.it/?s="+rand_input+"' readonly/> <a href='http://www.youtube.com/watch?v="+video_id+"' target='_blank'>YouTube</a></div>");
+
 
 						$(".rand_input").val("");
-						$(".rand_input").attr("placeholder", "Dubstep something else!");						
+						$(".rand_input").attr("placeholder", "Dubstep something else!");	
+
+						// Permalink show/hide
+						$("#perm").click(function() {
+					  		$("#copylink").toggle("slow").select();
+					  		$(this).toggleClass("active");
+						});
+
 						});
 					}
 					
