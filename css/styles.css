@@ -747,6 +747,9 @@ h2.quote {
 a.addthis_button_google_plusone {
   width: 76px !important;
 }
+#widget {
+  margin-left: 6px !important;
+}
 /* ################################################ absolute positioned stuff */
 #result {
   padding: 0 0 0 0;
