@@ -67,10 +67,17 @@ $(document).ready(function(){
 						var final="<div id='title'>"+video_title+"</div><div>"+video_frame+"</div><div id='count'>"+video_viewCount+" Views</div>";
 											
 						$("#result").html(final);
-						$(".vidlink").html("<div class='search-result'>You found <strong>"+search_input+" Dubstep!</strong> <a class='permalink' target='_blank' href='http://dbstp.it/?s="+search_input+"'>Permalink</a> <a href='http://www.youtube.com/watch?v="+video_id+"' target='_blank'>YouTube</a></div>");
+						$(".vidlink").html("<div class='search-result'>You found <strong>"+search_input+" Dubstep!</strong> <div id='perm' class='permalink'>Permalink</div><input id='copylink' type='text' value='http://dbstp.it/?s="+search_input+"' readonly/> <a href='http://www.youtube.com/watch?v="+video_id+"' target='_blank'>YouTube</a></div>");
 						$(".search_input").val("");
 						$(".thumbnail").html("<img src='http://img.youtube.com/vi/"+video_id+"/0.jpg' />");
 						$(".search_input").attr("placeholder", "Dubstep something else!");						
+						
+						// Permalink show/hide
+						$("#perm").click(function() {
+					  		$("#copylink").toggle("slow").select();
+					  		$(this).toggleClass("active");
+						});
+
 						});
 					}
 					
@@ -98,8 +105,9 @@ $(document).ready(function(){
 	myQuote [7] = "&#8220;I dub thee, Sir Step of Droppingston.&#8221;";		
 	myQuote [8] = "&#8220;Weak drop, bro.&#8221;";			
 	myQuote [9] = "&#8220;A great way to make your computer run hot!&#8221;";	
-	myQuote [10] = "&#8220;An engine for authentic dubsperiences.&#8221;";			
-			
+	myQuote [10] = "&#8220;An engine for authentic dubsperiences.&#8221;";
+	myQuote [11] = "&#8220;Post-Brostep.&#8221;";
+
 	var myRandom = Math.floor(Math.random()*myQuote.length);
 	$('h2.quote').html(myQuote[myRandom]);
 });
@@ -265,7 +273,14 @@ $(".search_random").click(searchRandom);
 						var final="<div id='title'>"+video_title+"</div><div>"+video_frame+"</div><div id='count'>"+video_viewCount+" Views</div>";
 						
 						$("#result").html(final);
-						$(".vidlink").html("<div class='search-result'>You found <strong>"+rand_input+" Dubstep!</strong> <a class='permalink' target='_blank' href='http://dbstp.it/?s="+rand_input+"'>Permalink</a> <a href='http://www.youtube.com/watch?v="+video_id+"' target='_blank'>YouTube Link</a></div>");
+						$(".vidlink").html("<div class='search-result'>You found <strong>"+
+							rand_input+
+							" Dubstep!</strong> <a class='permalink' target='_blank' href='http://dbstp.it/?s="+
+							rand_input+
+							"'>Permalink</a> <a href='http://www.youtube.com/watch?v="+
+							video_id+
+							"' target='_blank'>YouTube Link</a></div>");
+
 						$(".rand_input").val("");
 						$(".rand_input").attr("placeholder", "Dubstep something else!");						
 						});

@@ -181,14 +181,6 @@ p{-webkit-margin-before: 0;-webkit-margin-after: 0;-webkit-margin-start: 0px;-we
 	background: linear-gradient(top,  #ff5db1 0%,#ef017c 100%);
 }
 
-.marquee {  
-  overflow-x: -webkit-marquee;
-  -webkit-marquee-direction: forwards;
-  -webkit-marquee-style: scroll;
-  -webkit-marquee-speed: normal;
-  -webkit-marquee-increment: normal;
-}
-
 
 /* ################################################ regular stuff */
 
@@ -229,7 +221,7 @@ body {
 .texture{
 	width:100%;
 	height:100%;
-	background: url(images/bg-grid-dark.png) transparent left top;
+	background: url("../images/bg-grid-dark.png") transparent left top;
 	z-index:2;
 }
 
@@ -324,7 +316,7 @@ h2.quote{
 							-moz-font-smoothing: subpixel-antialiased !important;
 							-webkit-font-smoothing: subpixel-antialiased !important;
 						}
-						a{
+						a, div.permalink{
 							//background-color:#999;
 							background-color: darken(@grey, 10%);
 							color:#fff;
@@ -341,7 +333,7 @@ h2.quote{
 							font-smoothing: subpixel-antialiased !important;
 							-moz-font-smoothing: subpixel-antialiased !important;
 							-webkit-font-smoothing: subpixel-antialiased !important;
-							&:hover{
+							&:hover, &.active{
 								background-color:lighten(@grey, 10%);
 								text-decoration:none !important;
 							}
@@ -447,7 +439,7 @@ h2.quote{
 							width:108px;
 							height:108px;
 							cursor:pointer;
-							background:url(images/shirts-bro7.png) no-repeat left top;
+							background:url("../images/shirts-bro7.png") no-repeat left top;
 							text-indent:-9999px;
 							position:absolute;
 							right:0px;
@@ -510,7 +502,7 @@ h2.quote{
 		border-top:1px solid darken(@blue, 5%);
 		.texture{
 			.wrap;
-			background-image:url(images/share_texture.png);
+			background-image:url("../images/share_texture.png");
 			border-bottom:1px solid darken(@blue, 20%);
 			.container{
 				.content;
@@ -642,5 +634,62 @@ a.addthis_button_google_plusone{ width:76px !important; }
 	height:100%;
 	top:-12px;
 	left:0;
+}
+
+
+	#perm {
+		width: inherit;
+		display: inline-block;
+		margin-top: -5px !important;
+	}
+	#copylink {
+		position: relative;
+		width: auto;
+		display: none;
+		padding: 2px 4px 1px 4px;
+		top: -2px;
+		margin: -3px 0 0 8px;
+		font-size: 13px;
+	}
+
+/* ################################################ glow */
+
+.glow {
+  -webkit-animation: inputGlow 2s infinite ease-in-out;
+  -moz-animation: inputGlow 2s infinite ease-in-out;
+}
+@-webkit-keyframes inputGlow {
+  0% {
+    -webkit-box-shadow: 0 0 0px #1b83d4;
+  }
+  25% {
+    -webkit-box-shadow: 0 0 5px #1b83d4;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 10px #1b83d4;
+  }
+  75% {
+    -webkit-box-shadow: 0 0 5px #1b83d4;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0px #1b83d4;
+  }
+}
+@-moz-keyframes inputGlow {
+  0% {
+    -moz-box-shadow: 0 0 0px #1b83d4;
+  }
+  25% {
+    -moz-box-shadow: 0 0 5px #1b83d4;
+  }
+  50% {
+    -moz-box-shadow: 0 0 10px #1b83d4;
+  }
+  75% {
+    -moz-box-shadow: 0 0 5px #1b83d4;
+  }
+  100% {
+    -moz-box-shadow: 0 0 0px #1b83d4;
+  }
 }
 
